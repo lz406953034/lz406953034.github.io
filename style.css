@@ -1,0 +1,156 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+    scroll-behavior: smooth; /* 🔥 平滑滚动 */
+}
+
+body {
+    background-color: #f7f8fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 🔥 页面渐入动画 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 导航栏 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+/* 导航滚动时变小 */
+.navbar.scrolled {
+    padding: 10px 30px;
+    background: #1a2530;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* 🔥 导航高亮效果 */
+.menu a.active {
+    color: #3498db;
+    font-weight: bold;
+}
+.menu a:hover {
+    color: #3498db;
+}
+
+/* 首页大图区域 */
+.hero {
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("https://picsum.photos/1920/1080?random=10");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-3px); /* 按钮上浮动画 */
+}
+
+/* 通用区域 */
+section {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* 图片布局 + 图片hover动画 */
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.photo-grid img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* 🔥 图片放大阴影动画 */
+.photo-grid img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* 联系我 */
+.contact {
+    background: #ecf0f1;
+}
